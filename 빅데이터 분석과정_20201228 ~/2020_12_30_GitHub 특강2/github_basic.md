@@ -105,3 +105,9 @@ nothing added to commit but untracked files present (use "git add" to track)
 * 일반적으로 첫번째 원격저장소의 이름은 origin (원본)
 * 일반적으로 기본 브랜치의 이름은 `master`
 * `git push origin master`
+
+
+
+https://www.fastcampus.co.kr/data_red_hyh
+
+john@hphk.kr
