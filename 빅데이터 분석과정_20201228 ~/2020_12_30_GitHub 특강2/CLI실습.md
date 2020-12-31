@@ -4,7 +4,13 @@ Command Line interface
 
 커맨드(명령어)를 통해 작동하는 인터페이스
 
-<-> GUI(Graphic User Interface, 보통의 프로그램)
+
+
+## CLI vs. GUI
+
+* **CLI**: Command Line Interface (터미널)
+  * 명령어를 입력하여 컴퓨터를 조작
+* GUI: Graphic User Interface (윈도우/보통의 프로그램)
 
 
 
@@ -12,22 +18,24 @@ Command Line interface
 
 #### (1) pwd
 
-* pwd(print working directory): 현재 폴더의 경로
-* ~(home directory): 홈 디렉토리(git bash 처음 열면 나오는 기본 폴더)
+* **pwd**(print working directory): 현재 폴더의 경로
+* **~** (home directory): 홈 디렉토리 (git bash 처음 열면 나오는 기본 폴더), 가장 기본이 되는 폴더
 
 
 
 ### (2) ls
 
-* ls(list): 내용물을 출력(list)
+* ls(list): 해당 디렉토리의 내용을 출력
 
 
 
-#### (3) cd [폴더명]
+#### (3) cd [폴더명/경로명]
 
-* cd(change directory): 폴더를 변경
-* cd ..: 상위 폴더로 이동
-* cd .: 현재 폴더로 이동
+* cd(change directory): 디렉토리(폴더)를 이동/변경, 경로&파일은 `tab`으로 자동완성 가능
+* `cd ..`: 상위 디렉토리(폴더)로 이동
+* `cd .`: 현재 디렉토리(폴더)로 이동
+* `~`: 홈 디렉토리(폴더)로 이동
+* `/`: 루트 디렉토리(폴더)로 이동
 
 
 
@@ -74,5 +82,6 @@ Command Line interface
 
 
 
+#### (11) Cat [파일명]
 
-
+* 내용 출력
