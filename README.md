@@ -25,4 +25,4 @@
 * 
 # CodeUp 기초 100제
 * Java
-* Python
+* [Python](https://github.com/kdragonkorea/CodeUp_Basic_100/blob/master/CodeUp-basic100-python.md)
