@@ -1,0 +1,38 @@
+실습1
+>>> v1 = 100
+>>> v2=50
+>>> r1=v1+v2
+>>> r2=v1-v2
+>>> r3=v1*v2
+>>> r4=v1/v2
+>>> print(r1, r2, r3, r4)
+150 50 5000 2.0
+>>> print(r1)
+150
+>>> print(r2)
+50
+>>> print(r3)
+5000
+>>> print(r4)
+2.0
+
+실습2
+>>> name1="강"
+>>> name2="용"
+>>> print(name1+name2)
+
+>>> name1="강"
+>>> name2="용"
+>>> print(name1,name2,sep='@')
+
+>>> name1="강"
+>>> name2="용"
+>>> print(name1,name2,sep='---')
+
+실습3
+d1, d2, d3 = map(int, input('숫자를 입력하세요').split())
+sum = d1+d2+d3
+average = sum/3
+print(f'합은 {sum} 이고 평균은 {average} 입니다.')
+
+실습4
