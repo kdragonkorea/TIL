@@ -1,5 +1,14 @@
-import conditionLab5
 import random
-score = random.randrange(0, 100)
+score = random.randint(0, 100)
 
-print(score)
+if score >= 90:
+    grade = 'A'
+elif score >= 80:
+    grade = 'B'
+elif score >= 70:
+    grade = 'C'
+elif score >= 60:
+    grade = 'D'
+else:
+    grade = 'F'
+print(score, '점은', grade, '등급입니다.')
