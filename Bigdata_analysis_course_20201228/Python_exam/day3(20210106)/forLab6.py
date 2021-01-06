@@ -6,7 +6,10 @@
 #
 #     	결과 = 318
 
-data = 1
-for i in range(3,51,1):
-    data = data + i
-    print(f'결과 = {data}')
+data = 0
+for i in range(1,51):
+    if i % 3 == 0:
+        if i % 5 == 0:
+            continue
+        data += i
+print(data)

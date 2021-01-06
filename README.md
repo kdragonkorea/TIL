@@ -29,6 +29,7 @@
 # Python
 * if 연습
 * [for 연습](https://github.com/kdragonkorea/python_basic_korea_it_academi/blob/master/10_for.ipynb)
+* [while 연습](https://github.com/kdragonkorea/python_basic_korea_it_academi/blob/master/11_while%20(1).ipynb)
 # Coding Test (Python)
 * [CodeUp 기초 100제](https://github.com/kdragonkorea/CodeUp_Basic_100/blob/master/.ipynb_checkpoints/CodeUp_basic100_python-checkpoint.ipynb)
 * 기초2. 입출력문 및 연산자
