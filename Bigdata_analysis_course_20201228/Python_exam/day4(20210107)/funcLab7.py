@@ -17,11 +17,11 @@ for i in range(5):
 # differtwovalue함수를 정의할 때 return은 한번만 사용하도록 시도해보자.
 
 # def differtwovalue(x1,x2):
-#     if x1 >= x2:
-#         ans = x1 - x2
+#     if a >= b:
+#         c = a - b
 #     else:
-#         ans = x2 - x1
-#     return ans
+#         c = b - a
+#     return c
 #
 # import random
 # for i in range(1,6):
