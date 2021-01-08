@@ -3,3 +3,5 @@ for dan in range(2, 10):
     for num in range(2, 10):
         print(dan, "*", num, "=", dan * num, end="\t")
     print()
+
+    

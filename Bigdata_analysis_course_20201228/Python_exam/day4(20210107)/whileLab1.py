@@ -17,3 +17,5 @@ print(f'출력값: {data}')
 for i in range(1, data+1):
     print(f'{i} -> {i*i}')  # I * i = i ** 2
 
+# review(2021-01-08)
+# while문을 이용해서 다시 연습해보자.
