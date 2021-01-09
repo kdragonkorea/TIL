@@ -7,16 +7,28 @@
 #   짝수의 합은 XXX 이고
 #   홀수의 합은 YYY 이다.
 
-#   2021-01-09 풀이------------------------------------------------------
+#   2021-01-09 풀이2 (코드리뷰와 동일함)------------------------------------
 evenNum = 0
 oddNum = 0
-for i in range(2, 101, 2):
-    evenNum = evenNum + i
-for i in range(1, 101, 2):
-    oddNum = oddNum + i
+for i in range(1, 101):
+    if i % 2 == 0:
+        evenNum = evenNum + i
+    else:
+        oddNum = oddNum + i
 print("1부터 100까지의 숫자들 중에서")
-print("짝수의 합은",evenNum, "이고")
-print("홀수의 합은",oddNum, "이다.")
+print("짝수의 합은",evenNum,"이고")
+print("홀수의 합은",oddNum,"이다.")
+
+#   2021-01-09 풀이------------------------------------------------------
+# evenNum = 0
+# oddNum = 0
+# for i in range(2, 101, 2):
+#     evenNum = evenNum + i
+# for i in range(1, 101, 2):
+#     oddNum = oddNum + i
+# print("1부터 100까지의 숫자들 중에서")
+# print("짝수의 합은",evenNum, "이고")
+# print("홀수의 합은",oddNum, "이다.")
 # for를 한번만 사용해서 다시 구현해보기
 
 

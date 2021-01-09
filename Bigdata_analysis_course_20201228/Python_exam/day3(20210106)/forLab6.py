@@ -4,16 +4,19 @@
 #   다음과 같은 결과가 되도록 구현한다.
 # 	결과 = 318
 
-#   2021-01-09 풀이 (잘 모르겠음.. /hint: if를 두번사용)
+#   2021-01-09 풀이 (다시 풀어보기)
+
+
+
+# 코드리뷰
 sum = 0
 for i in range(1, 51):
-    if i % 3 == 0:
-        sum = sum + i
-    elif i % 5 == 0:
-        continue
-print("결과 =",sum)
+    if i%3==0:
+        if i%5==0:
+            continue
+        sum += i
 
-
+print('결과 =', sum)
 
 
 
