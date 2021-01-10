@@ -5,16 +5,22 @@
 # 또는 "pairNum1이 pairNum2 보다 작다." 출력한다.
 # 추출된 두 개의 숫자가 동일하면 "게임 끝"이라는 메시지를 출력하고 종료한다.
 
+# 2021-01-10 복습-----------------------------------------------
+# 1) 무한루프(while True)로 시작하자
+# 2) 난수를 다른 수로 반복해서 출력하기 위해서는 while문 안에 입력한다.
+
 import random
-pairNum1 = random.randint(1, 6)
-pairNum2 = random.randint(1, 6)
 
-
-
-
-
-
-
+while True:
+    pairNum1 = random.randint(1, 6)
+    pairNum2 = random.randint(1, 6)
+    if pairNum1 > pairNum2:
+        print(pairNum1, "이",pairNum2,"보다 크다")
+    elif pairNum1 < pairNum2:
+        print(pairNum1, "이", pairNum2, "보다 작다")
+    elif pairNum1 == pairNum2:
+        print("게임 끝")
+        break
 
 
 

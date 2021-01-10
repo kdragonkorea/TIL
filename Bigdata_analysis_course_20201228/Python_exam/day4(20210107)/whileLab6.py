@@ -1,6 +1,4 @@
 # [ 실습6 ] - while 문으로 무한루프 처리
-# 1. whileLab6py 라는 소스를 생성한다.
-# 2. 반복 처리해야 하는 기능은 다음과 같다.
 # - 숫자를 하나 입력받는다.
 # - 입력된 숫자가 0 이면 “종료”라는 메시지를 출력하고 수행을 종료한다.
 # - 입력된 숫자가 -10 보다 작거나 10보다 크면 입력 받는 것부터 다시 시작한다.
@@ -14,7 +12,19 @@
 #       6
 #       0 이 입력되면
 #       종료
-data = int(input())
+
+# 2021-01-10 복습(multiply 변수를 지정하는 연습을 하자)
 while True:
-    if -10 <= data <= 10:
+    x = int(input("숫자를 입력하세요: "))
+    if x == 0:
+        print("종료")
+        break
+    elif x < -10 or x > 10:
+        continue
+    elif x > 0:
+        print("입력값: ", x)       # 여기까지는 잘 구현할 수 있지만, 아래부터는 다시 고민해보자.
+        multiply = multiply * x
+        multiply = multiply + 1
+
+        print(multiply)
 
