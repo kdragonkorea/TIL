@@ -1,15 +1,12 @@
-def updatelist(times, listnums) :
-    for i in range(len(listnums)) :
-        listnums[i] *= times
+def calcscore(name, *score, **option):
+    print(name)
+    sum = 0
+    for s in score:
+        sum += s
+    print("총점 :", sum)
+    if (option['avg'] == True ):
+        print("평균 :", sum / len(score))
 
-
-l1 = [1,2,3,4,5]
-print(l1)
-updatelist(2, l1)
-print(l1)
-print("-"*10)
-l2 =  [10, 20, 30, 40];
-print(l2)
-updatelist(3, l2)
-print(l2)
-
+calcscore("김상형", 88, 99, 77, avg = True)
+calcscore("김한슬", 99, 98, 95, 89, avg = False)
+calcscore("둘디", avg = False)

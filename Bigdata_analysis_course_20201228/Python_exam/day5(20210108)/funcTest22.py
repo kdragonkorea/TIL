@@ -1,4 +1,4 @@
-def printdeco(*p, deco="@") :
+def printdeco(*p, deco="@") :   # 기본값을 가지고 있는 일반 변수는 가변인수 뒤에 올수 있다.
     for data in p :
         print(deco, data, deco)
     print()

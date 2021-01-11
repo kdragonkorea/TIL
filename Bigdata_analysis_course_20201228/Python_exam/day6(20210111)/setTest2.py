@@ -11,3 +11,5 @@ print(primate < mammal)
 print(primate <= primate)
 print(primate < primate)
 
+# 거의 사용하지 않는다 !
+

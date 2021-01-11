@@ -5,33 +5,59 @@
 #    숫자 2개와 연산자 1개를 전달하여 expr() 이라는 함수를 호출한 다음 리턴 결과가 None 이면 수행 불가 를 출력하고
 #    그렇지 않으면 연산결과 : XX 를 출력한다.
 
-
 # 2021-01-11 복습()
-def expr():
+def expr(num1, num2, a):
+    if a == '*':
+        a = num1*num2
+        return a
+    elif a == '+':
+        a = num1+num2
+        return a
+    elif a == '-':
+        a = num1-num2
+        return a
+    else:
+        return
 
+result = expr(3, 6, '*')
 
-
-
-
-
-
-
-
-
-
-
-
-
-def expr(a, b):
-    c = a * b
-    return c
-
-
-result = expr(2, 0)
-if result == 0:
+if result == None:
     print("수행불가")
 else:
-    print("연산결과: ", result)
+    print(expr(3, 6, '*'))
+
+# result = expr(3,5,"+")
+# if result != None:
+#     print("연산 결과 :", result)
+# else:
+#     print("수행 불가")
+#
+# result = expr(3,5,"#")
+# if result == None:
+#     print("수행 불가")
+# else:
+#     print("연산 결과 :", result)
+
+
+
+
+
+
+
+
+
+
+
+# def expr(a, b):
+#     c = a * b
+#     return c
+#
+#
+# result = expr(2, 0)
+# if result == 0:
+#     print("수행불가")
+# else:
+#     print("연산결과: ", result)
 
 
 # review(2021-01-08)

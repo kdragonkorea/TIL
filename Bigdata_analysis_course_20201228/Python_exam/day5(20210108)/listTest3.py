@@ -17,6 +17,11 @@ for sub in lol:
         print(item, end=' ')
     print()
 
+# for x1 in list:
+#     for x2 in x1:
+#         print(x2, end=' ')
+#     print()
+
 print("-- 중첩 리스트2 --")
 score = [
     [88, 76, 92, 98],
