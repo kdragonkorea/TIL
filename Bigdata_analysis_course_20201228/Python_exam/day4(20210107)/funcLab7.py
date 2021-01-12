@@ -7,9 +7,36 @@
 #   1부터 30 사이의 난수 2 개를 추출하여 2번에서 구현된 함수를 호출하고 결과를 다음 형식으로 출력한다.
 #    "X 와 Y 의 차는 W 입니다." ----> 5 회 반복
 
-#2021-01-12 복습
+#2021-01-12 복습 (함수는 잘 구현하였지만, 5회 반복에 대해서 다시 구현을 해보자)
 
+# import random
+# def differtwovalue(a, b):
+#     for i in range(5):
+#         a = random.randint(1, 30)
+#         b = random.randint(1, 30)
+#         if a > b:
+#             return a-b
+#         elif b > a:
+#             return b-a
+#         else:
+#             return 0
+#
+# print(f'{a} 와 {b} 의 차는 {differtwovalue(a,b)} 입니다.')
 
+# 2021-01-12 복습 (5회 반복에 대해서 코드 리뷰를 참고하여 다시 만들어 보았다.)
+import random
+def differtwovalue(a, b):
+    if a > b:
+        return a-b
+    elif b > a:
+        return b-a
+    else:
+        return 0
+
+for i in range(5):
+    a = random.randint(1, 30)
+    b = random.randint(1, 30)
+    print(f'{a} 와 {b} 의 차는 {differtwovalue(a,b)} 입니다.')
 
 
 
