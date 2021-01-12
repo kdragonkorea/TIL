@@ -7,3 +7,4 @@ def calcrange(begin, end):
 print("3 ~ 7 =", calcrange(3, 7))
 print("1 ~ 100 =", calcrange(1, 100))  # 예시로 만들었음
 
+
