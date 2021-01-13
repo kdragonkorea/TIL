@@ -19,5 +19,5 @@ print("list3 = {}".format(numlist3))
 
 # 가장 효율적
 numlist4 = [ num for num in range(1, 6) ]
-print("list4 = {}".format(numlist4))    # print('f({}.......')
+print("list4 = {}".format(numlist4))    # print(f'list4 = {numlist4}')
 

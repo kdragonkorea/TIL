@@ -28,3 +28,5 @@ if name.startswith("한"):
 file = "girl.jpg"
 if file.endswith(".jpg"):
     print("그림 파일입니다.")
+
+print(file.endswith(".jpg"))
