@@ -13,8 +13,38 @@
 # 전달되는 아규먼트 값은 1~10으로 제한한다. 1~10 이외의 값이 전달된 경우에는 처리하지 않는다.
 # 숫자를 다양하게 지정해서 print_triangle_withdeco () 함수를 호출해 본다.
 
-# 2021-01-14 복습
-def print_triangle_withdeco(num, %):
+# 2021-01-14 복습 (삼각형을 반대로 출력하는 방법에 대해서 다시 고민해보자)
+def print_triangle_withdeco(num, x='%'):
+    if 1 <= num <= 10:
+        for i in range(1, num+1):
+            print((num-i)*' ',i * x)
+    else:
+        pass
+
+print_triangle_withdeco(8, '#')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # 소스리뷰
