@@ -1,10 +1,38 @@
 # Python list
 
-| 수업          | 오전                                    | 오후                  |
-| ------------- | --------------------------------------- | --------------------- |
-| 웹 프로그래밍 | html실습(br,input,type,name,value), CSS | CSS(a:hover..), 교안, |
+> list는 ?
 
-* 오전실습1(html): http://localhost:8000/edu/htmlexam/exam2.html
-* 오전실습2(html): http://localhost:8000/edu/htmlexam/exam3.html
-* 오전실습3(css): http://localhost:8000/edu/htmlexam/exam1_css.html
-* 오전실습4(css): http://localhost:8000/edu/cssexam/csslab1.html
+**list 만드는 방법**
+
+* [1, 2, 3, 4, 5]
+* ['a', 'b', 'c']
+* [1,2,3,'a','b','c,']
+
+**list 인덱스**
+
+* list[1]
+
+**list 슬라이싱**
+
+**list 수정**
+
+**list 삭제**
+
+**list 연산**
+
+**중첩 list(이차원 리스트)**
+
+list 메소드
+
+list 데이터 삭제
+
+list 데이터 확장
+
+
+
+
+
+
+
+
+
