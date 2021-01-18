@@ -1,4 +1,4 @@
-f = open("live.txt", "wt", encoding="UTF-8")
+f = open("live.txt", "wt", encoding="UTF-8")    # wt=출력할 목적으로 열어라.
 print(f, type(f))
 f.write("""삶이 그대를 속일지라도
 슬퍼하거나 노하지 말라!
