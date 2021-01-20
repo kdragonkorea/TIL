@@ -12,7 +12,7 @@ list2 = [ ('boy', '소년'), ('school', '학교'), ('book', '책') ]
 dic = dict(list2)
 print(dic)
 
-list3 = dict(boy= '소년', school='학교', book='책')
+list3 = dict(boy='소년', school='학교', book='책')
 dic = dict(list3)
 print(dic)
 

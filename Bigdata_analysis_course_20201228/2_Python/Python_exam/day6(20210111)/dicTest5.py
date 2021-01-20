@@ -6,6 +6,7 @@ score_of_class = {
 }
 
 print("class3 :", score_of_class["class3"])
+
 for key, value in score_of_class.items() :
     print("[", key, "반]")
     print("총점 :", sum(value))
