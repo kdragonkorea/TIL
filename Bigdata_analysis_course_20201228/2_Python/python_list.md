@@ -54,9 +54,5 @@ list 데이터 확장
 2. 수행 결과는 다음과 같다.
    행운의 로또번호  : X, X, X, X, X, X
 
-> 소스코드 바로가기 https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/2_Python/Python_exam/day5(20210108)/listLab5.py
-
-
-
-
+[소스코드](https://github.com/kdragonkorea/TIL)
 

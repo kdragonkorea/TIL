@@ -6,10 +6,11 @@
 # 2021-01-18 복습(동일한 숫자가 중복되지 않도록 하는 방법에 대해서 다시 생각해보자.)
 import random
 lottolist = []
-for i in range(6):
-    a = random.randint(1, 45)
-    lottolist.append(a)
-print(lottolist)
+while True:
+    for i in range(6):
+        a = random.randint(1, 45)
+        lottolist.append(a)
+    print(lottolist)
 
 
 

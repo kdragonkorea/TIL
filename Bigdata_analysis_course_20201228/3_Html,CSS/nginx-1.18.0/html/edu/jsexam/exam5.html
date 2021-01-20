@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>자바스크립트의 연산자(1)</h1>
+<hr>
+<pre>   <!--script의 수행결과를 각 행마다 개행을 한다.-->
+<script>
+	document.writeln(10>5);
+	document.writeln("abc">"ABC");
+	var str = "가나다";
+	document.writeln(str == "가나다");
+	document.writeln(true == 1);
+	document.writeln("100" == 100);     // 문자열과 숫자열이 다르더라도 값이 동일하여 true
+	document.writeln(true === 1);       // '===' 두 데이터의 타입과 값을 동시에 비교연산
+	document.writeln("100" === 100);	//
+	document.writeln(10/3);             //
+	document.writeln(10%3);             //
+	var num=10;                         //
+	document.writeln(num++); // 10      // 'num++'는 다른 연산을 먼저 하고 나중에 변수의 값을 1증가
+	document.writeln(--num);  // 10     // '++num은' 변수의 값을 1증가시키고 다른 연산을 수행
+</script>
+</pre>
+</body>
+</html>
