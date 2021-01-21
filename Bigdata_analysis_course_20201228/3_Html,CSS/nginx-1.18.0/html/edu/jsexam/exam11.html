@@ -10,18 +10,22 @@
 <script>
 var ary = ['둘리', '또치', '도우너', '희동이', '고길동']
 document.write(ary + "<br>");
-var ary2 = ary.sort();
+
+var ary2 = ary.sort();          // "sort"는 한글기준 ㄱ~ㅎ 순서로 분류
 document.write(ary + "<br>");
 document.write(ary2 + "<br>");
 document.write("<hr>");
+
 var ary3 = [30, 11, 5, 27, 9]
 document.write(ary3 + "<br>");
-var ary4 = ary3.sort(function(a, b){ return a-b;});
+
+var ary4 = ary3.sort(function(a, b){ return a-b;});     // 일반적으로 숫자 "sort"는 문자열 기준 적용
 document.write(ary3 + "<br>");
 document.write(ary4 + "<br>");
 document.write("<hr>");
+
 var ary5 = [ ];
-ary5.push(100);
+ary5.push(100);     // "push"
 ary5.push(200);
 ary5.push(500);
 document.write(ary5 + "<br>");

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>2021-01-21 JavaScript 실습</title>
+    <style>
+        h1 {
+            color : red;
+        }
+        ul {
+            color : blue;
+        }
+    </style>
+</head>
+<body>
+<h1>JavaScript 배열 실습</h1>
+<hr>
+
+<script>
+var a1 = [10, 5, 7, 21, 4, 8, 18];
+
+var sum = 0;
+for(var i in a1)
+	sum = sum + a1[i]
+    document.write("<h1>모든 원소의 합 : "+sum+"</h1>");
+document.write("<hr>");
+
+document.write("<ul>");
+var max = Math.max.apply(null, a1);
+document.write("<li>최대값 : "+max+"</li>");
+
+document.write("<ul>");
+var min = Math.min.apply(null, a1);
+document.write("<li>최소값 : "+min+"</li>");
+
+
+</script>
+</body>
+</html>
+
+<!--1. 다음 값들을 저장하여 배열을 생성한다.-->
+<!--   	10, 5, 7,21, 4, 8, 18-->
+
+<!--2. 모든 원소 값들을 더하여 다음 형식으로 HTML 첫 번째 제목 크기(<h1>)로 출력한다.(document.write())-->
+<!--      모든 원소의 합 : XX-->
+
+<!--3. 최대값과 최소값을 구해서 순서없는 리스트 형식(<ul>)으로 출력한다.-->
+<!--	최대값 : XX-->
+<!--	최소값 : XX-->
+<!--Math.max(10, 20);   //  20-->
+

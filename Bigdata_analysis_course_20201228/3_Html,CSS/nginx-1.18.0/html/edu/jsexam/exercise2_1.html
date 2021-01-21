@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+var sum = function () {
+    if (arguments > 0)
+        var sum = 0;
+        for(var num=1; num < n+1; num+=1)
+            sum = sum + num
+            document.write('1부터 입력한 숫자까지의 합: '+sum+'<br>');
+    else
+        document.write("return값 없움<br>");
+}
+
+sum();
+sum(100);
+
+var rn = Math.floor(Math.random()*6)
+if (rn == 0)
+    document.write("<h3>결과값이 없어요!!</h3>");
+else {
+    document.write("<h2>호출 결과값 : "+rn+"</h2>");
+}
+
+
+</script>
+</body>
+</html>
+
+<!--1. 다음 기능을 처리하는 함수 sum()를 구현해 본다.-->
+<!-- - 매개변수를 한 개 선언한다.-->
+<!-- - 아규먼트가 아무값도 전달되지 않으면 리턴값 없이 리턴한다.-->
+<!-- - 1부터 아규먼트로 전달된 숫자값 까지 합을 구하여 리턴한다.-->
+
+<!--2. 0부터 5사이의 난수를 하나 추출하여 아규먼트로 전달하면서 sum() 함수를 호출하는데-->
+<!--   0이 추출된 경우에는 아규먼트 없이 호출한다.-->
+<!--   호출한 다음 -->
+<!--   리턴값이 있으면 다음 형식으로 브라우저의 도큐먼트 영역 <h2> 태그와 함께 출력하고-->
+
+<!--	호출 결과값 : XX-->
+
+<!--   리턴값이 없으면 다음과 같이 브라우저의 도큐먼트 영역에 <h3> 태그와 함께 출력한다.-->
+
+<!--	결과값이 없어요!!	      -->
