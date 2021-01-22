@@ -1,4 +1,4 @@
-function write(content, tag) {
+function write(content, tag) {                          // 자주 사용하는 함수를 모아놓은 것
 	document.write("<"+tag+">"+content+"</"+tag+">");	
 }
 function hr() {
