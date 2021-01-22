@@ -1530,3 +1530,5 @@
 127.0.0.1 - - [21/Jan/2021:16:39:33 +0900] "GET /edu/jsexam/exercise2.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36"
 127.0.0.1 - - [21/Jan/2021:16:39:33 +0900] "GET /edu/jsexam/exercise2.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36"
 127.0.0.1 - - [21/Jan/2021:16:39:34 +0900] "GET /edu/jsexam/exercise2.html HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36"
+127.0.0.1 - - [21/Jan/2021:17:17:22 +0900] "GET /edu/jsexam/exam16.html HTTP/1.1" 200 1195 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36"
+127.0.0.1 - - [21/Jan/2021:17:17:34 +0900] "GET /edu/jsexam/exam17.html HTTP/1.1" 200 541 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36"
