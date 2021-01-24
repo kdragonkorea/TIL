@@ -55,7 +55,7 @@
 
   * 반복제어문: for, while, do~while
 
-    * 일반(전통)for - `exam7_1`
+    * 일반(전통)for - [exam7-1](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam7_1.html)
 
       ```javascript
     for(초기식;조건식;증감식)
@@ -85,7 +85,7 @@
       }
       ```
   
-    * while - `exam7_2`
+    * while - [exam7-2](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam7_2.html)
 
       ```javascript
     while(조건식)
@@ -100,7 +100,7 @@
     * break :  반복문을 종료해라
     * continue : 다음 반복으로 계속해서 진행해라.
 
-### API : Application Programming Interface
+## API : Application Programming Interface
 
 > 프로그래밍을 할 때 자주 구현되는 기능들을 미리 구현해 놓은 프로그램으로 프로그래밍 언어마다 자기만의 API를 가지고 있으며, 개발환경을 구축할 때 함께 설치되는 API를 표준 API라고 하며 개발자가 필요에 의해 추가로 설치하는 API들을 확장 API 또는 third-party API라고 한다.
 
@@ -110,7 +110,17 @@
 
 
 
-### 연산
+## 메소드 모음
+
+#### Math.random(): 0 ~ 1 사이의 수를 반환 - [exam8](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam8.html), [exam8-1](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam8_1.html)
+
+#### Math.floor():  정수만 반환
+
+#### console.log(): 
+
+
+
+## 연산
 
 - === : 두 데이터의 타입과 값을 동시에 비교연산
 
