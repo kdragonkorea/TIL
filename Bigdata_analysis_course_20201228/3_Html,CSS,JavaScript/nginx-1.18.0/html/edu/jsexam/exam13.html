@@ -9,7 +9,8 @@
 <hr>
 <script>
 //f1();
-//document.write("<hr>")
+//
+
 var f1 = function () {
 	document.write('f1() 호출<br>');	
 }
@@ -23,8 +24,8 @@ f2(10,20);
 
 document.write('<hr>');
 
-var result1 = f1();
-var result2 = f2(100,200);
+var result1 = f1();                         // 함수를 입력하였기 때문에 result1의 변수명 정의와 동시에 출력된다.
+var result2 = f2(100,200);                  // 함수를 입력하였기 때문에 result1의 변수명 정의와 동시에 출력된다.
 document.write('result1 : '+result1+' result2 : '+result2);
 if(result1 == undefined) {//if(!result1) {
 	document.write('<br>리턴값이 없군요!!');
@@ -34,8 +35,8 @@ document.write('<hr>');
 
 f1(100);
 f2(100);
-document.write(typeof f1 + '<br>');	
-document.write(typeof f2 + '<br>');	
+document.write(typeof f1 + '<br>');
+document.write(typeof f2 + '<br>');
 </script>
 </body>
 </html>

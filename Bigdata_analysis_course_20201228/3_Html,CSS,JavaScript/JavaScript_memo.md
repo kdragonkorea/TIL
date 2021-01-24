@@ -16,89 +16,95 @@
   * 이벤트 처리하는 방법, DOM 객체를 통해서 HTML태그를 제어하는 방법 (1/21 교육 예정)
   * jQuery:  JavaScript의 대표적인 API로 간단한 자바스크립트 구현을 지원
 
-* 주요 3개 호출 
 
-  * **window.alert() 호출:** 사용자에게 메세지를 보여주고 확인받는 용도
-  * **window.prompt() 호출:** 사용자로 부터 데이터를 입력받는 용도
-  * **window.confirm() 호출:** yes 또는 no 둘중 하나를 입력받는 용도
 
-* **제어문**
+## 주요 3개 호출문
 
-  * 조건제어문: if, switch
+* **window.alert() 호출:** 사용자에게 메세지를 보여주고 확인받는 용도
+* **window.prompt() 호출:** 사용자로 부터 데이터를 입력받는 용도
+* **window.confirm() 호출:** yes 또는 no 둘중 하나를 입력받는 용도
 
-    ```javascript
-    if(조건식)
-        수행문장;
+
+
+## 제어문
+
+#### 조건제어문: if, switch
+
+```javascript
+if(조건식)
+    수행문장;
+
+if(조건식){
+    수행문장;
+    수행문장;
+    ...
+}
     
-    if(조건식){
-        수행문장;
-        수행문장;
-        ...
-    }
-        
-    if(조건식){
-     	수행문장;
-    else
-        ...
-    }
-    
-    if(조건식){
-        수행문장;
-    else if(조건식)
-        수행문장;
-    else if (조건식)
-        수행문장;
-    else
-        수행문장;
-    }
-    ```
+if(조건식){
+ 	수행문장;
+else
+    ...
+}
 
-  * 반복제어문: for, while, do~while
+if(조건식){
+    수행문장;
+else if(조건식)
+    수행문장;
+else if (조건식)
+    수행문장;
+else
+    수행문장;
+}
+```
 
-    * 일반(전통)for - [exam7-1](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam7_1.html)
+#### 반복제어문: for, while, do~while
 
-      ```javascript
-    for(초기식;조건식;증감식)
-          반복수행문장
-      for(변수정의와초기화식;반복처리를계속할지결정하는조건식;변수의값을변화시키는식)
-      for(var num=1; num < 11; num+=1) ---> 10번 반복
-      for(var num=10; num > 0; num-=1) ---> 10번 반복
-      for(var num=10; num < 20; num+=1) ---> 10번 반복
-      for(var num=1; num <= 50; num+=1) ---> 1부터 50까지의 값을 1씩 증가시키면서 처리하시오.
-      for(var num=1; num <= 50; num+=2)   ---> 1부터 50까지의 값을 2씩 증가시키면서 처리하시오.
-      ```
+* 일반(전통)for - [exam7-1](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam7_1.html)
+
+  ```javascript
+  for(초기식;조건식;증감식)
+      반복수행문장
+  for(변수정의와초기화식;반복처리를계속할지결정하는조건식;변수의값을변화시키는식)
+  for(var num=1; num < 11; num+=1) ---> 10번 반복
+  for(var num=10; num > 0; num-=1) ---> 10번 반복
+  for(var num=10; num < 20; num+=1) ---> 10번 반복
+  for(var num=1; num <= 50; num+=1) ---> 1부터 50까지의 값을 1씩 증가시키면서 처리하시오.
+  for(var num=1; num <= 50; num+=2)   ---> 1부터 50까지의 값을 2씩 증가시키면서 처리하시오.
+  ```
+
+* 향상된for, for-each, for-in   :  for (변수정의 in 배열 또는 객체)
+
+  ```javascript
+  a = [10,20,30,40,50]  // 배열, array
+  //파이썬
+  for data in a :
+  print(data)   --> 10 20 30 40 50 이 행단위로 값출력
+  //자바스크립트
+  for(var i in a) {
+  window.alert(i);  --> 0, 1, 2, 3, 4 와 같이 인덱스로 출력
+  }
+  //자바스크립트
+  for(var i in a) {
+  window.alert(a[i]); --> 10, 20, 30, 40, 50 각 인덱스의 데이터를 출력
+  }
+  ```
+
+* while - [exam7-2](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam7_2.html)
+
+  ```javascript
+  while(조건식)
+      반복문장;
   
-    * 향상된for, for-each, for-in   :  for (변수정의 in 배열 또는 객체)
+  while(true)
+      무한반복문장;
+  ```
 
-      ```javascript
-    a = [10,20,30,40,50]  // 배열, array
-      //파이썬
-      for data in a :
-      print(data)   --> 10 20 30 40 50 이 행단위로 값출력
-      //자바스크립트
-      for(var i in a) {
-      window.alert(i);  --> 0, 1, 2, 3, 4 와 같이 인덱스로 출력
-      }
-      //자바스크립트
-      for(var i in a) {
-      window.alert(a[i]); --> 10, 20, 30, 40, 50 각 인덱스의 데이터를 출력
-      }
-      ```
-  
-    * while - [exam7-2](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam7_2.html)
+#### 분기제어문: break, continue
 
-      ```javascript
-    while(조건식)
-          반복문장;
-      
-      while(true)
-          무한반복문장;
-      ```
-  
-  * 분기제어문: break, continue
+* break :  반복문을 종료해라
+* continue : 다음 반복으로 계속해서 진행해라.
 
-    * break :  반복문을 종료해라
-    * continue : 다음 반복으로 계속해서 진행해라.
+
 
 ## API : Application Programming Interface
 
@@ -139,9 +145,9 @@
 
 
 
-# 배열
+## 배열
 
-
+> [exam9](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam9.html), [exam10](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam10.html), [exam11](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam11.html)
 
 - 여러  데이터들을 하나의 묶음으로 다루고자 할 때 사용
 - 묶을 수 있는 데이터의 갯수에 제한이 없고, 데이터 타입도 제한이 없다.
@@ -155,10 +161,15 @@
   - 배열의 크기(배열을 구성하는 엘리먼트의 갯수)
   - 배열객체의 length 라는 속성(변수)의 값을 사용
   - 배열의 요소(원소, 엘리먼트)를 접근하여 L-value, R-value 모두 가능하며 인덱스는 0부터 시작한다.
+- 배열의 데이터를 `문자열` 기준으로 분류하는 방법: `배열변수명.sort();`
+- 배열의 데이터를 `숫자순` 기준으로 분류하는 방법: `배열변수명.sort(function(a,b){return a-b;});`
+- 배열에서 데이터를 추가하는 방법: `배열변수명.push(데이터);`
 
 
 
-# 함수
+## 함수
+
+> [exam13](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam13.html), [exam14](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam14.html), [exam15](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam15.html), [exam16](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam16.html), [exam17](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam17.html), [exam18](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam18.html)
 
 - 함수를 만드는 방법
 
@@ -185,7 +196,7 @@
 
 
 
-# 변수
+## 변수
 
 #### 자바스크립트의 변수 정의
 
@@ -195,7 +206,7 @@
 
 
 
-# 객체
+## 객체
 
 #### 자바스크립트의 객체 생성방법
 
@@ -217,7 +228,8 @@
 
 - 클래스(생성자함수)를 이용하는 방법
 
-  - new Array(), new Date()
+  - new Array()
+  - new Date() - 현재 날짜를 나타냄
 
 - 내장 객체
 

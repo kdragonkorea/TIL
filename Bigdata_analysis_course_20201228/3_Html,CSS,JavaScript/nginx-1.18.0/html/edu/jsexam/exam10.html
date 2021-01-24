@@ -8,23 +8,26 @@
 <h1>배열 생성과 활용(2)</h1>
 <hr>
 <script>
-var a1 = new Array();  // [ ]
-var a2 = new Array(10); // 크기 [,,,,,,,,,]
-var a3 = new Array('가'); // 원소값 ['가']
-var a4 = new Array(10, 20); // 원소값 [10, 20]
-var a5 = new Array(1,2,3,4,5); // 원소값 [1,2,3,4,5]
+var a1 = new Array();               // [ ]
+var a2 = new Array(10);             // 크기 [,,,,,,,,,]
+var a3 = new Array('가');           // 원소값 ['가']
+var a4 = new Array(10, 20);         // 원소값 [10, 20]
+var a5 = new Array(1,2,3,4,5);      // 원소값 [1,2,3,4,5]
+
 /* window.alert(a1.length);
 window.alert(a2.length);
 window.alert(a3.length);
 window.alert(a4.length);
 window.alert(a5.length); */
+
 document.write(a1 + "<br>");
 document.write(a2.toString() + "<br>");
 document.write(a3.toString() + "<br>");
 document.write(a4.toString() + "<br>");
 document.write(a5.toString() + "<br>");
-var d = new Date();
-document.write(d.toString() + "<br>");
+
+var d = new Date();                         // "new Date"는 현재 날짜를 알려주는 객체
+document.write(d.toString() + "<br>");      // "toString()"는 문자열로 변환
 document.write(d + "<br>");
 </script>
 </body>

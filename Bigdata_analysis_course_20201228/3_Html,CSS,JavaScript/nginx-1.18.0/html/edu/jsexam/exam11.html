@@ -19,13 +19,15 @@ document.write("<hr>");
 var ary3 = [30, 11, 5, 27, 9]
 document.write(ary3 + "<br>");
 
-var ary4 = ary3.sort(function(a, b){ return a-b;});     // 일반적으로 숫자 "sort"는 문자열 기준 적용
+var ary4 = ary3.sort(function(a, b){return a-b;});     // 결과: 5, 9, 11, 27, 30
+//var ary4 = ary3.sort();     // 결과: 11, 27, 30, 5, 9  (일반적으로 숫자 "sort"는 문자열 기준 적용)
+
 document.write(ary3 + "<br>");
 document.write(ary4 + "<br>");
 document.write("<hr>");
 
 var ary5 = [ ];
-ary5.push(100);     // "push"
+ary5.push(100);     // "push" 는 배열에 데이터 추가
 ary5.push(200);
 ary5.push(500);
 document.write(ary5 + "<br>");
