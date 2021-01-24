@@ -21,15 +21,18 @@ window.onload = function() {
 	var dom1 = document.getElementById("t1");
 	console.log(dom1);
 	console.log(dom1.textContent);
+
 	var dom2 = document.getElementById("t3");
 	console.log(dom2);
+
 	var dom3 = document.getElementById("t4");
 	console.log(dom3);
+
 	var dom4 = document.getElementById("t5");
 	console.log(dom4);
-	console.log(dom4.getAttribute("src"));
-	console.log(dom4.src); 
-	var dom5 = document.getElementById("p");
+	console.log(dom4.getAttribute("src"));      //..src를 불러온다.
+	console.log(dom4.src);                      //전체 src를 불러온다. (http ~)
+	var dom5 = document.getElementById("p");    //
 	dom5.innerHTML = "<h2>"+new Date().toLocaleString()+"</h2>";
 	//dom5.textContent = "<h2>"+new Date().toLocaleString()+"</h2>";
 }

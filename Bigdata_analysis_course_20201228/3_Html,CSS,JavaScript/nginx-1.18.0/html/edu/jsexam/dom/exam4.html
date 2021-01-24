@@ -7,15 +7,17 @@
 <body>
 <h1>시간정보 출력하기</h1>
 <hr>
-<button onclick="startTime()">시간을 알려주라옹...</button>
+<button onclick="startTime()">시간을 알려주라옹...</button>     <!--on클릭 이벤트-->
 <button onclick="stopTime()">시간 출력을 종료하라옹...</button>
 <output></output>
 <script>
-var target = document.getElementsByTagName("output")[0];
-function startTime() {
-	var d = new Date();
+var target = document.getElementsByTagName("output")[0];    // 배열 객체를 리턴한다.
+function startTime() {                                      // startTime은
+	var d = new Date();                                     // new Date는
 	target.innerHTML = "<h2>"+d.toLocaleString()+"</h2>";
+	//target.innerHTML += "<h2>"+d.toLocaleString()+"</h2>";  // 계속 추가
 }
+
 function stopTime() {
 	target.innerHTML = "";
 }
