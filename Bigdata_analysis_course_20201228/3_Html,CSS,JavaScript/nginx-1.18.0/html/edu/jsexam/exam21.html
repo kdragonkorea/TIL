@@ -19,6 +19,7 @@
 	obj.eat("바나나");
 	obj.eat("딸기");
 	hr();
+
 	writeColor(typeof obj, 'h2', "red");
 	obj.project = "자바스크립트";
 	obj.study = function() {
@@ -27,9 +28,11 @@
 	}
     obj.study();
     hr();
+
     for(var key in obj)
     	write(key + " : " + obj[key], "h4");
     hr()
+
     write(obj.project, "h2");
     write(obj["project"], "h2");
     delete obj.study;

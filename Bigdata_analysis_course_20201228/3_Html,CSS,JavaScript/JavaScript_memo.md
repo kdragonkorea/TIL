@@ -198,6 +198,8 @@ else
 
 ## 변수
 
+> exam15, exam16, exam17, exam18, exam19, exam20
+
 #### 자바스크립트의 변수 정의
 
 - **var, let, const**
@@ -207,6 +209,8 @@ else
 
 
 ## 객체
+
+> exam21, exam22, exam23
 
 #### 자바스크립트의 객체 생성방법
 
@@ -238,57 +242,93 @@ else
 
 
 
-#### DOM(Document Object Model) 프로그래밍
+## DOM(Document Object Model) 프로그래밍
 
-- DOM객체: 브라우저가 웹 페이지를 해석하고 랜더링할 때 인식된 각각의 태그들을 자바스크립트 객체로 생성하며 이 객체들을 DOM 객체라 고 한다. 생성되는 DOM 객체들은 부모 자식 관계를 적용하여 트리구조로 구성한다.
 
-- DOM 프로그래밍에서 익혀야 하는 것
 
-  - 동적인 처리를 하려는 태그의 DOM 객체를 찾는 방법
+### DOM객체
 
-    - document.getElementsByTagName
-    - document.getElementById
-    - document.getElementsByClassName
-    - document.querySelectorAll
-    - document.querySelector
+> 브라우저가 웹 페이지를 해석하고 랜더링할 때 인식된 각각의 태그들을 자바스크립트 객체로 생성하며 이 객체들을 DOM 객체라고 한다. 생성되는 DOM 객체들은 부모 자식 관계를 적용하여 트리구조로 구성한다.
 
-  - DOM 객체 타입
+### DOM 프로그래밍에서 익혀야 하는 것
 
-    - Element 타입
-    - Attribute 타입
-    - Text 타입
+- 동적인 처리를 하려는 태그의 DOM 객체를 찾는 방법
 
-  - 찾은 DOM 객체를 가지고 필요한 동적처리를 구현하는 방법
+  - document.getElementsByTagName
+  - document.getElementById
+  - document.getElementsByClassName
+  - document.querySelectorAll
+  - document.querySelector
 
-    - 컨텐트 변경하기
+- DOM 객체 타입
 
-      - dom.innerHTML = "<p>새로운내용</p>"
-      - dom.textContent = "새로운내용"
+  - Element 타입
+  - Attribute 타입
+  - Text 타입
 
-    - 스타일 바꾸기
 
-      - dom.style.CSS속성명 = CSS속성값
+### 찾은 DOM 객체를 가지고 필요한 동적처리를 구현하는 방법
 
-      - dom.style.color = "red"
+- 컨텐트 변경하기
 
-      - dom.style.**background-color** = "red" (x)
+  - dom.innerHTML = "<p>새로운내용</p>"
+  - dom.textContent = "새로운내용"
 
-        background**-**color 는 background**C**olor 로 사용해야 한다.
+- 스타일 바꾸기
 
-    - 이벤트 핸들러 등록하기 (3가지)
+  - dom.style.CSS속성명 = CSS속성값
 
-      - 인라인 이벤트 모델(지역적 방식)
+  - dom.style.color = "red"
 
-        <태그명 on이벤트명="이벤트핸들러코드">
+  - dom.style.**background-color** = "red" (x)
 
-      - 고전 이벤트 모델(전역적 방식)
+    background**-**color 는 background**C**olor 로 사용해야 한다.
 
-        DOM 객체를 찾는다
+- 이벤트 핸들러 등록하기 (3가지)
 
-        dom.on이벤트명 = function () {.....}
+  - 인라인 이벤트 모델(지역적 방식)
 
-      - 표준 이벤트 모델(전역적 방식)
+    <태그명 on이벤트명="이벤트핸들러코드">
 
-        DOM 객체를 찾는다.
+  - 고전 이벤트 모델(전역적 방식)
 
-        dom.addEventListener("이벤트명",function () { ...})
+    DOM 객체를 찾는다
+
+    dom.on이벤트명 = function () {.....}
+
+  - 표준 이벤트 모델(전역적 방식)
+
+    DOM 객체를 찾는다.
+
+    dom.addEventListener("이벤트명",function () { ...})
+
+
+
+## jQuery 라이브러리
+
+> API 사용 방법이 일관성 있어서 API를 익히기 쉽다.
+
+html(): innerHTML -
+
+text(): textContent -
+
+val(): value - 
+
+css()
+
+attr()
+
+#### jQuery의 이벤트 핸들러 구현
+
+- $('...').on('이벤트이름',함수)
+
+  $('...').on(자바스크립트객체)
+
+
+
+## map
+
+```javascript
+function showPosition(position) {
+    x.innerHTML="위도: " + position.coords.latitude + "<br />경도: " + position.coords.longitude;
+```
