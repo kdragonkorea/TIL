@@ -5,20 +5,23 @@
 # 전달된 아규먼트들 중에 짝수가 없으면 0 을 리턴한다. 아규먼트가 전달되지 않으면 - 1 을 리턴한다.
 # (3) 숫자를 다양하게 지정해서 sumEven1() 함수를 호출해 본다.
 
-# 2021-01-15 복습 (다시 풀어보기, 변수가 중요)
+# 2021-01-25 복습 
+# (1) 반복문이 먼저인지 제어문이 먼저인지 고민해보기
+# (2) return할 위치 고민하기 
 
-def sumEven1(*n):
+def sumEven1(*p):
     sum = 0
-    for i in n:
-        if i%2==0:
+    result = 0
+    for i in p:
+        if i % 2 == 0:
             sum = sum + i
-    if len(n) == 0:
+        else:
+            pass
+    if len(p) == 0:
         sum = -1
     return sum
 
-print(sumEven1(1, 2, 4))
 print(sumEven1())
-print(sumEven1(100))
 
 
 
@@ -32,6 +35,24 @@ print(sumEven1(100))
 
 
 
+
+
+
+
+# 2021-01-15 복습 (다시 풀어보기, 변수가 중요)
+
+# def sumEven1(*n):
+#     sum = 0
+#     for i in n:
+#         if i%2==0:
+#             sum = sum + i
+#     if len(n) == 0:
+#         sum = -1
+#     return sum
+#
+# print(sumEven1(1, 2, 4))
+# print(sumEven1())
+# print(sumEven1(100))
 
 # 코드리뷰
 # def sumEven1(*p):

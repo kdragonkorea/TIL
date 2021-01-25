@@ -1,9 +1,3 @@
-# 2021-01-25 복습 ()
-def mydict(**p='a'):
-    if len(p)==0:
-        result = dict()
-
-# 소스리뷰
 def mydict(**p):
     d = {}
     print(p)
