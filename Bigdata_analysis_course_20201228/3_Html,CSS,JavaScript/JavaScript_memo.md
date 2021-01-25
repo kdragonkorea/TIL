@@ -328,7 +328,10 @@ attr()
 
 ## map
 
+> geolocation, geocoding, ggmap1, ggmap2, ggmap3, ggmap4, ggmap5, ggmap6 
+
 ```javascript
 function showPosition(position) {
     x.innerHTML="위도: " + position.coords.latitude + "<br />경도: " + position.coords.longitude;
 ```
+
