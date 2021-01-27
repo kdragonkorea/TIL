@@ -339,13 +339,43 @@ function showPosition(position) {
 
 ## 장고(Django)
 
-- URL: `http`://`www.domain.com`:`1234`/`path/to/resource``?a=b&x=y`
-  - `http`: protocol
-  - `www.domain.com`: host
-  - `1234`: port
-  - `path ~` : resource path
-  - `?a ~` : query
 - http 상태코드
   - 200: 성공
   - 404: 실패, 잘못 요청
   - 500: 실패, 요청한거 실행 에러
+- 장고에 내장된 서버를 기동시키기 위해 터미널에서 입력 방법: `python manage.py runserver`
+- 프로젝트를 만들기 위해 터미널에서 입력 방법: `django-admin startproject 프로젝트이름`
+
+#### HttpRequest 와 HttpResponse
+
+- HttpRequest - HTTP 프로토콜기반으로 요청이 왔을 때 요청 관련 정보를 제공하는 객체로 뷰함수가 호출될 때 아규먼트로 전달된다. (장고서버가 객체를 생성)
+- HttpResponse - HTTP 프로토콜기반으로 온 요청에 대한 응답시 사용하는 객체로 응답 내용을 담게 된다. (HTML 태그문자열, 템플릿을 사용한 랜더객체)
+
+#### Django 개발환경 구축방법
+
+1. `python_venv` 폴더를 생성 후 cmd창에서 
+
+   ```
+   
+   ```
+
+2. 
+
+
+
+## Query 문자열
+
+HTTP Client가 HTTP Server 요청시 서버에서 요청하려는 대상의 URI가 전달되는데 이 때 함께 전달될 수 있는 문자열이다.
+
+- name = value형식으로 구성되어야 한다.
+- 여러개의 name=value가 사용될 때는 & 기호로 구부노디게 구성해야 한다.
+- 영문과 숫자는 그대로 전달되지만 한글과 특수문자들은 %기호와 16진수 코드값으로 전달된다. (UTF
+- 공백문자는 +기호 또는 %2C로 전달된다.
+- Query 문자열을 가지고 HTTP Server에게 정보를 요청할 때는 두가지 요청 방식중에 한개를 선택할 수 있다.
+- GET: Query 문자열이 외부에 보여진다. 요청 URL
+
+
+
+#### GET방식과 POST방식의 차이
+
+`POST방식`은 query 문자(url)가 노출이 안되기 때문에 `로그인할 때` 또는 보여주고 싶지 않을 때 사용한다. `GET방식`은 query 문자(url)가 노출되고 관계없을 때 사용한다.
