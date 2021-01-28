@@ -343,39 +343,119 @@ function showPosition(position) {
   - 200: 성공
   - 404: 실패, 잘못 요청
   - 500: 실패, 요청한거 실행 에러
-- 장고에 내장된 서버를 기동시키기 위해 터미널에서 입력 방법: `python manage.py runserver`
-- 프로젝트를 만들기 위해 터미널에서 입력 방법: `django-admin startproject 프로젝트이름`
 
 #### HttpRequest 와 HttpResponse
 
 - HttpRequest - HTTP 프로토콜기반으로 요청이 왔을 때 요청 관련 정보를 제공하는 객체로 뷰함수가 호출될 때 아규먼트로 전달된다. (장고서버가 객체를 생성)
 - HttpResponse - HTTP 프로토콜기반으로 온 요청에 대한 응답시 사용하는 객체로 응답 내용을 담게 된다. (HTML 태그문자열, 템플릿을 사용한 랜더객체)
 
-#### Django 개발환경 구축방법
 
-1. `python_venv` 폴더를 생성 후 cmd창에서 
+
+### Django 개발환경 구축방법
+
+#### 가상환경구축
+
+1. `python_venv` 폴더를 원하는 장소에 생성 후 cmd창에서 아래와 같이 입력한다.
+
+   djangovenv생성: `python -m venv djangovenv`
 
    ```
+   C:\Users\kangyong\TIL\Bigdata_analysis_course_20201228\python_venv
    
+   C:\Users...\python_venv>python -m venv djangovenv
    ```
 
-2. 
+2. `djangovenv` 폴더에 `Scripts` 폴더로 이동하여 `activate` 프로그램을 실행한다.
+
+   ```
+   C:\Users\...\python_venv>cd djangovenv\Scripts
+   
+   C:\Users\...\python_venv>cd djangovenv\Scripts>activate
+   ```
+
+3. cmd창에서 `activate` 실행한 후 좌측에 `(djangovenv)` 가 붙은 것을 볼 수 있으며, 가상환경이 활성화된 상태로 인식하면 된다. Django 개발 환경을 설치하지 않았을 경우 `pip install django` 를 입력하여 설치를 진행한다.
+
+   ```
+   (djangovenv) C:\Users\...\python_venv>cd djangovenv\Scripts>
+   
+   (djangovenv) C:\Users\...\python_venv>cd djangovenv\Scripts>pip install django
+   ```
+
+4. 버전 업그레이드와 관련된 경고문구가 나올 경우 `python -m pip install --upgrade pip` 명령어를 입력해서 업그레이드를 진행한다.
+
+   ```
+   (djangovenv) C:\Users\...\python_venv>cd djangovenv\Scripts>python -m pip install --upgrade pip
+   ```
+
+#### 장고 프로젝트 만들기
+
+1. `DJANGOexam`폴더를 원하는 장소에 생성 후 cmd창에서 해당 폴더로 이동하여 아래와 같이 명령어를 입력하여 장고 프로젝트를 생성한다.
+
+   장고 프로젝트 생성: `django-admin startproject (원하는폴더명)`
+
+   ```
+   (djangovenv) C:\Users\...\DJANGOexam>
+   
+   (djangovenv) C:\Users\...\DJANGOexam>django-admin startproject studyproject(원하는 폴더명으로 변경 가능)
+   ```
+
+2. 생성된 studyproject 폴더로 이동하여 `python manage.py runserver`를 입력해서 장고에 내장된 서버를 기동시킨다.
+
+   ```
+   (djangovenv) C:\Users\...\DJANGOexam>cd studyproject
+   
+   (djangovenv) C:\Users\...\DJANGOexam\studyproject>python manage.py runserver
+   
+   ...
+   Quit the server with CTRL-BREAK
+   ```
+
+3. 크롬 브라우저에서 http://localhost:800/ 입력하여 요청하면 장고의 기본 웹 페이지가 출력되는 것을 알수 있다.
+
+4. 파이참 File - Settings 에서 장고 프로젝트 생성한 폴더(`studyproject`)를 가상환경으로 선택한다. **(장고강의교안 참조)**
+
+5. 파이참 하단 터미널을 선택하여 학습할 소스들을 작성할 폴더를 생성한다. (firstapp)
+
+   ```
+   (djangovenv) C:\Users\...\DJANGOexam\studyproject>
+   
+   (djangovenv) C:\Users\...\DJANGOexam\studyproject>python manage.py startapp firstapp
+   ```
+
+6. 파이참에서 studyproject의 `settings.py`와 `urls.py` 그리고 firstapp의 `views.py` 세 개의 파일을 수정한다. **(장고강의교안 참조)**
+
+7. 파이참 터미널에서 서버를 기동시킨다. (`python manage.py runserver`)
+
+   ```
+   (djangovenv) C:\Users\...\DJANGOexam\studyproject>python manage.py runserver
+   ```
+
+8. 브라우저(크롬)에서 URL 로 요청하여 정상적으로 출력 되는지 확인한다.
 
 
 
-## Query 문자열
+### Query 문자열
 
-HTTP Client가 HTTP Server 요청시 서버에서 요청하려는 대상의 URI가 전달되는데 이 때 함께 전달될 수 있는 문자열이다.
+> HTTP Client가 HTTP Server 요청시 서버에서 요청하려는 대상의 URI가 전달되는데 이 때 함께 전달될 수 있는 문자열이다.
 
 - name = value형식으로 구성되어야 한다.
-- 여러개의 name=value가 사용될 때는 & 기호로 구부노디게 구성해야 한다.
-- 영문과 숫자는 그대로 전달되지만 한글과 특수문자들은 %기호와 16진수 코드값으로 전달된다. (UTF
+
+- 여러개의 name=value가 사용될 때는 & 기호로 구분되게 구성해야 한다.
+
+- 영문과 숫자는 그대로 전달되지만 한글과 특수문자들은 %기호와 16진수 코드값으로 전달된다. (UTF-8)
+
 - 공백문자는 +기호 또는 %2C로 전달된다.
+
 - Query 문자열을 가지고 HTTP Server에게 정보를 요청할 때는 두가지 요청 방식중에 한개를 선택할 수 있다.
-- GET: Query 문자열이 외부에 보여진다. 요청 URL
 
+  - GET : Query 문자열이 외부에 보여진다. 요청 URL 뒤에 ? 기호와 함께 전달되기 때문이다.
+  - POST : Query 문자열이 외부에 보여지지 않는다. Query 문자열의 길이에 제한이 없다. 
 
+  
 
 #### GET방식과 POST방식의 차이
 
-`POST방식`은 query 문자(url)가 노출이 안되기 때문에 `로그인할 때` 또는 보여주고 싶지 않을 때 사용한다. `GET방식`은 query 문자(url)가 노출되고 관계없을 때 사용한다.
+- POST방식은 query 문자(url)가 노출이 안되기 때문에 `로그인할 때` 또는 보여주고 싶지 않을 때 사용한다. 
+
+- GET방식은 query 문자(url)가 노출되고 관계없을 때 사용한다.
+

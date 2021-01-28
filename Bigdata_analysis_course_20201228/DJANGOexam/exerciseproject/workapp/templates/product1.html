@@ -1,0 +1,49 @@
+{% extends 'basesimple.html' %}
+{% block mycontent %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Django 실습3</title>
+        <style>
+            h1 {
+                text-align : center;
+            }
+            div {
+                margin : auto;
+                width : auto;
+                height : 200px;
+                text-align : center;
+            }
+            img {
+                margin : 5px;
+                width : 150px;
+                height : 150px;
+                border : 1px solid black;
+                box-shadow : 10px 10px 5px gray;
+                opacity : 1;
+            }
+            img:hover {
+                opacity : 0.3;
+            }
+        </style>
+</head>
+<body>
+    <h1>원하는 상품을 클릭해 주세요!!</h1>
+    <hr>
+    <div>
+    <a href="http://localhost:8000/workapp/basket1/?pid=p001/"><img src="/static/images/1.jpg"></a>
+    <a href="http://localhost:8000/workapp/basket1/p002/"><img src="/static/images/2.jpg"></a>
+    <a href="http://localhost:8000/workapp/basket1/p003/"><img src="/static/images/3.jpg"></a>
+    <a href="http://localhost:8000/workapp/basket1/p004/"><img src="/static/images/4.jpg"></a>
+    <a href="http://localhost:8000/workapp/basket1/p005/"><img src="/static/images/5.jpg"></a>
+        <br>
+    <a href="http://localhost:8000/workapp/basket1/p006/"><img src="/static/images/6.jpg"></a>
+    <a href="http://localhost:8000/workapp/basket1/p007/"><img src="/static/images/7.jpg"></a>
+    <a href="http://localhost:8000/workapp/basket1/p008/"><img src="/static/images/8.jpg"></a>
+    <a href="http://localhost:8000/workapp/basket1/p009/"><img src="/static/images/9.jpg"></a>
+    <a href="http://localhost:8000/workapp/basket1/p0010/"><img src="/static/images/10.jpg"></a>
+    </div>
+</body>
+</html>
+{% endblock %}

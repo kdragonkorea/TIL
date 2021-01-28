@@ -8,14 +8,14 @@
     </style>
 </head>
 <body>
-    {% if writer and opinion %}
+    {% if writer and opinion %}     <!-- 변수가 참인가? -->
         <h2> <span>{{writer}}</span>님이 남긴 글입니다.</h2>
         <hr>
         {{opinion}}
         <hr>
     {% else %}
         <h1>의견을 남겨주세요</h1>
-        <form method="POST" action="/workapp/exercise2/">
+        <form method="POST" action="/workapp/exercise2/">   <!-- POST방식은 반드시 csrf_token와 URI 끝에 / 들어가야한다. -->
         {% csrf_token %}
         <input type="text" name="text" placeholder="작성자 이름을 입력해주세요"> <br>
         <br>
