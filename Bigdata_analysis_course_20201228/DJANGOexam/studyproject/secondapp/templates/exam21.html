@@ -8,7 +8,7 @@
 $(document).ready(function() {
 	$.ajax({
         type : 'get',
-        url : 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=75474bdfc6c0a4eb738939dd66c101b5&targetDt=20210127',
+        url : 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=75474bdfc6c0a4eb738939dd66c101b5&targetDt=20210128',
         dataType : 'json',
         error: function(xhr, status, error){
             alert(error);
@@ -23,7 +23,7 @@ $(document).ready(function() {
 </script>
 <!-- <script>
 $(document).ready(function() {
-	$.getJSON('http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=75474bdfc6c0a4eb738939dd66c101b5&targetDt=20210127',
+	$.getJSON('http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=75474bdfc6c0a4eb738939dd66c101b5&targetDt=20210128',
         function(json){
             console.log(json)
             $('div').html(JSON.stringify(json))

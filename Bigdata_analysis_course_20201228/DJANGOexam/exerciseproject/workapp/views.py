@@ -20,7 +20,7 @@ def exercise2(request) :
 def product1(request) :
     return render(request, 'product1.html', None)
 
-def basket1(request, uri) :
-    request.method == 'GET'
-    context = {'uri':uri}
+def basket1(request) :
+    result = request.GET['pid']
+    context = {'result':result}
     return render(request, 'basket1.html', context)

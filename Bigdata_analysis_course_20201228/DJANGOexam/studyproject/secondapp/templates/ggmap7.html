@@ -35,7 +35,7 @@
         var old;
      	var dom = document.getElementById("map");
 		if(dom) {
-		 var map = new google.maps.Map(dom, {
+		 var map = new google.maps.Map(dom, {       // 위도와 경도로 평균해서 위치 중심 바로가기
 			center: { lat: avglat, lng: avglng},				
 		            	zoom: 14
 		 });

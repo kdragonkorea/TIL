@@ -4,7 +4,7 @@
   <div style="text-align:center">
   <h1 >이름이 'unico'인 다른 장고뷰를 요청해보자!! </h1>
   <hr>
-  <form action="{% url 'unico' %}" method="GET">
+  <form action="{% url 'unico' %}" method="GET">  <!--'unico'는 views.py 에서 name을 의미-->
     <input type="text" name="message">
     <input type="submit">
   </form>

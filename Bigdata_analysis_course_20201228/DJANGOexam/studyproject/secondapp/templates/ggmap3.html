@@ -24,17 +24,17 @@
             	zoom: 16
           	});
 			var marker = new google.maps.Marker({position: latlng, map: map});
-			
+
 			var contentString = "<h3>우리가 학습하는 곳이에요ㅎㅎㅎ<img src='/static/images/clover.png' width='20'></h3>";
-			
+
 			var infowindow = new google.maps.InfoWindow({
 			    content: contentString
 			});
-			
+
 			marker.addListener('click', function() {
 			    infowindow.open(map, marker);
 			});
-        }     
+        }
     </script>
   </body>
 </html>

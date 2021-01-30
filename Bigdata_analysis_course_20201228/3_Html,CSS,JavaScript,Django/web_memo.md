@@ -337,7 +337,7 @@ function showPosition(position) {
 
 
 
-## 장고(Django)
+# 장고(Django)
 
 - http 상태코드
   - 200: 성공
@@ -386,6 +386,8 @@ function showPosition(position) {
    ```
    (djangovenv) C:\Users\...\python_venv>cd djangovenv\Scripts>python -m pip install --upgrade pip
    ```
+
+
 
 #### 장고 프로젝트 만들기
 
@@ -459,3 +461,122 @@ function showPosition(position) {
 
 - GET방식은 query 문자(url)가 노출되고 관계없을 때 사용한다.
 
+
+
+#### XML / JSON
+
+- GML
+  - SGML
+    - XML: 규격화 시킨 문서를 만들고 싶을 때 사용, 태그명을 용도에 맞게 직접 정의하여 사용 가능하다.
+    - HTML: 웹페이지제작에 사용되는 전용 마크업 언어
+
+- JSON (JavaScript Object Notation)
+
+
+
+#### AJAX의 핵심내용
+
+- JSON(XML) 형식으로 응답하는 뷰를 준비해야 한다. (템플릿을 거치지 않고 뷰가 직접응답)
+
+- JavaScript만 사용해서 AJAX 요청을 구현하는 방법
+
+  ```
+  var xhr = new XMLHttpRequest()
+  xhr.onload = 함수
+  xhr.open("GET",대상URL,true)
+  xhr.send()
+  ```
+
+- jQuery API를 사용하여 AJAX 요청을 구현하는 방법
+
+  ```
+  $.getJSON("대상URL",함수)
+  
+  $.ajax({........})
+  ```
+
+  
+
+- exam23.html
+  
+- css table sample: https://www.w3schools.com/bootstrap4/bootstrap_tables.asp
+  
+- exam24.html
+  
+  - 카카오맵 AJAX 이용
+  
+- 서울시 빅데이터 OPEN API
+  - json: http://openapi.seoul.go.kr:8088/796143536a756e69313134667752417a/json/LampScpgmtb/1/100/
+  - xml: http://openapi.seoul.go.kr:8088/796143536a756e69313134667752417a/xml/LampScpgmtb/1/100/
+  
+- 
+
+
+
+## Django templates 예제 모음
+
+- `변수와 로직`태그를 사용한 예제
+
+  - [exam4.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam4.html)
+
+  ```
+  {% for num in numbers %}
+    <li>{{num}}</li>
+  {% endfor %}
+  ```
+
+  - [exam5.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam5.html)
+
+  ```
+  {% if '게스트' == name  and '작성안함' == address %}
+  <h1> 이름과 주소를 작성하지 않았군요ㅜㅜ</h1>
+  {% else %}
+  <h1>당신의 이름은 {{name}} 이고 주소는 {{address}} 이군요</h1>
+  {% endif %}
+  ```
+
+  - [exam6.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam6.html)
+
+  ```
+  {% if num %}
+       <h2>결과 값 : {{ num }}</h2>
+  {% else %}
+      <form method="POST" action="/secondapp/exam6/">
+          {% csrf_token %}
+          <input type="number" name="number" placeholder="숫자를 입력하세요" required>
+          <input type="submit" value="POST방식으로요청~~~">
+      </form>
+  {% endif %}
+  ```
+
+- `block과 extends 태그`를 사용한 예제 (html파일 내용의 반복을 줄여준다)
+
+- `Ajax`를 사용한 예제 
+
+  - [exam20.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam20.html)
+  - [exam21.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam21.html)
+  - [exam22.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam22.html)
+  - [exam23.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam23.html)
+  - [exam24.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam24.html)
+
+- `google map`를 사용한 예제 
+
+  - [ggmap1.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/ggmap1.html)
+  - [ggmap2.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/ggmap2.html), marker 표시
+  - [ggmap3.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/ggmap3.html), marker 표시, contentString 표시
+  - [ggmap4.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/ggmap4.html), map사이즈 조절, 현 위치로 출력
+  - [ggmap5.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/ggmap5.html), js를 이용하여 주소 입력 후 출력
+  - [ggmap6.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/ggmap6.html), jQuery를 이용하여 주소 입력 후 출력
+  - [ggmap7.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/ggmap7.html), marker 5개를 이미지로 출력 후 위도와 경도 평균값 위치로 출력
+
+- `kakao map`를 사용한 예제 
+
+  > 카카오맵: http://apis.map.kakao.com/web/sample/
+
+  - [kkmap1.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/kkmap1.html), map만 표시
+  - [kkmap2.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/kkmap2.html), map과 사용자 control 추가 (지도/스카이뷰, zoom in/out)
+  - [kkmap3.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/kkmap3.html), 타입 추가 (교통정보, 로드뷰, 지형정보, 지적편집도)
+  - [kkmap4.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/kkmap4.html), marker 표시
+  - [kkmap5.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/kkmap5.html), marker 표시, infowindow(글상자) 표시, 텍스트와 링크 표시
+  - [kkmap6.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/kkmap6.html), marker 표시, infowindow(글상자) 표시(생성/제거)
+  - [kkmap7.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/kkmap7.html), marker 여러개 표시, infowindow(글상자), mouseover 이벤트(오버/아웃)
