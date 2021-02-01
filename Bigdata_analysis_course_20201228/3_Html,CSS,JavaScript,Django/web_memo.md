@@ -389,7 +389,7 @@ function showPosition(position) {
 
 
 
-#### 장고 프로젝트 만들기
+## 장고 프로젝트 만들기
 
 1. `DJANGOexam`폴더를 원하는 장소에 생성 후 cmd창에서 해당 폴더로 이동하여 아래와 같이 명령어를 입력하여 장고 프로젝트를 생성한다.
 
@@ -497,8 +497,6 @@ function showPosition(position) {
 
   
 
-- exam23.html
-  
 - css table sample: https://www.w3schools.com/bootstrap4/bootstrap_tables.asp
   
 - exam24.html
@@ -513,7 +511,7 @@ function showPosition(position) {
 
 
 
-## Django templates 예제 모음
+## Django Templates 예제 모음
 
 - `변수와 로직`태그를 사용한 예제
 
@@ -551,6 +549,24 @@ function showPosition(position) {
 
 - `block과 extends 태그`를 사용한 예제 (html파일 내용의 반복을 줄여준다)
 
+- query를 이용하여 GET을 호출
+
+  - [exam8.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam8.html)
+
+- `매개변수`를 사용한 예제
+
+  - [exam10.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam10.html), [exam11.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam11.html), [exam12.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam12.html), [exam14.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam1.html)
+  - urls.py
+
+  ```
+  path('exam11/<name>/<int:age>', views.exam11, name='exam11'),
+  path('exam12/<int:num1>/<num2>', views.exam12, name='exam12'),
+  path('exam14/<word>/<int:num1>/<num2>', views.exam14, name='exam14'),
+  ```
+
+  - range, sorted를 사용하여 lotto번호 출력: exam18.html
+  - current_date를 이용하여 현재 시간 출력: exam19.html
+
 - `Ajax`를 사용한 예제 
 
   - [exam20.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/exam20.html)
@@ -580,3 +596,38 @@ function showPosition(position) {
   - [kkmap5.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/kkmap5.html), marker 표시, infowindow(글상자) 표시, 텍스트와 링크 표시
   - [kkmap6.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/kkmap6.html), marker 표시, infowindow(글상자) 표시(생성/제거)
   - [kkmap7.html](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/DJANGOexam/studyproject/secondapp/templates/kkmap7.html), marker 여러개 표시, infowindow(글상자), mouseover 이벤트(오버/아웃)
+
+### Django 모델
+
+#### CRUD
+
+> Create, Read, Update, Delete
+
+- SQL에서 CRUD를 (INSERT, SELECT, UPDATE, DELETE) Django에서는 API로 사용 가능하다.
+
+#### Django 가지고 Database를 연동(CRUD)하는 구현 과정
+
+1. 모델 클래스를 생성한다. (models.py)
+
+   Model 이라는 클래스를 상속하고 만들려는 DB테이블의 컬럼 사양에 맞추어 클래스 변수를 정의한다.
+
+2. Django에서 제공하는 명령을 수행시켜서 모델클래스에 알맞는 DB 테이블을 생성한다.
+3. 모델클래스를 통해서 CRUD를 구현한다.
+   - C - 모델클래스의 객체를 생성한 후 save() 메서드 호출
+   - R - `모델클래스.objects.all()`, `모델클래스.objects.filter(...)`, `모델클래스.objects.order_by(...)`, `모델클래스.objects.first()`, `모델클래스.objects.last()`, `모델클래스.objects.count()`
+
+## 장고 모델 DB 테이블의 SQL 만들기
+
+1. 폴더(app)를 생성한다.
+
+   장고 생성: `python manage.py startapp (원하는폴더명)`
+
+   ```
+   (djangovenv) C:\Users\...\DJANGOexam>django-admin startproject studyproject(원하는 폴더명으로 변경 가능)
+   ```
+
+2. settings에
+
+3. SQLite 생성
+
+4. 
