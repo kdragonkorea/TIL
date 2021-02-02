@@ -118,11 +118,11 @@ else
 
 ## 메소드 모음
 
-#### Math.random(): 0 ~ 1 사이의 수를 반환 - [exam8](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam8.html), [exam8-1](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam8_1.html)
+- Math.random(): 0 ~ 1 사이의 수를 반환 - [exam8](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam8.html), [exam8-1](https://github.com/kdragonkorea/TIL/blob/master/Bigdata_analysis_course_20201228/3_Html%2CCSS%2CJavaScript/nginx-1.18.0/html/edu/jsexam/exam8_1.html)
 
-#### Math.floor():  정수만 반환
+- Math.floor():  정수만 반환
 
-#### console.log(): 
+- console.log(): 
 
 
 
@@ -436,6 +436,51 @@ function showPosition(position) {
 
 
 
+## 장고 모델 DB 테이블의 SQL 만들기
+
+1. 폴더(app)를 생성한다.
+
+   터미널 입력 명령문: `python manage.py startapp (원하는폴더명)`
+
+   ```
+   (djangovenv) C:\Users\...\DJANGOexam\studyproject>python manage.py startapp (원하는 폴더명)
+   ```
+
+2. `settings.py`에서 `INSTALLED_APPS` 리스트에 폴더명을 '입력/추가'한다.
+
+3. `models.py`에서 클래스를 생성한다.
+
+   ```
+   from django.db import models
+   
+   class DBTest(models.Model) :
+       name = models.CharField(max_length=10)  # max_length 속성은 필수 (영/한 최대 10글자까지)
+       age = models.IntegerField(null=True)    # 선택적으로 입력 가능
+   
+       def __str__(self):
+           return self.name + ":" + str(self.age)
+   ```
+
+4. 모델 소스를 읽고 생성될 DB테이블의 SQL 을 생성한다.
+
+   터미널 입력 명령문: `python manage.py makemigrations (생성한 폴더명)`
+
+   ```
+   (djangovenv) C:\Users\...\DJANGOexam\studyproject>python manage.py makemigrations(생성한 폴더명)
+   ```
+
+5. 생성된 SQL을 실행시켜서 SQLite에 테이블을 생성한다.
+
+   터미널 입력 명령문: `python manage.py migrate`
+
+   ```
+   (djangovenv) C:\Users\...\DJANGOexam\studyproject>python manage.py migrate
+   ```
+
+6. CRUD를 실행한다.
+
+
+
 ### Query 문자열
 
 > HTTP Client가 HTTP Server 요청시 서버에서 요청하려는 대상의 URI가 전달되는데 이 때 함께 전달될 수 있는 문자열이다.
@@ -616,18 +661,5 @@ function showPosition(position) {
    - C - 모델클래스의 객체를 생성한 후 save() 메서드 호출
    - R - `모델클래스.objects.all()`, `모델클래스.objects.filter(...)`, `모델클래스.objects.order_by(...)`, `모델클래스.objects.first()`, `모델클래스.objects.last()`, `모델클래스.objects.count()`
 
-## 장고 모델 DB 테이블의 SQL 만들기
 
-1. 폴더(app)를 생성한다.
 
-   장고 생성: `python manage.py startapp (원하는폴더명)`
-
-   ```
-   (djangovenv) C:\Users\...\DJANGOexam>django-admin startproject studyproject(원하는 폴더명으로 변경 가능)
-   ```
-
-2. settings에
-
-3. SQLite 생성
-
-4. 
